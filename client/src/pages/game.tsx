@@ -1,22 +1,19 @@
 import { useState } from "react";
-import WelcomeScreen from "@/components/welcome-screen";
 import StoryScreen from "@/components/story-screen";
 import InvestmentEducationSlideshow from "@/components/investment-education-slideshow";
 import GameScreen from "@/components/game-screen";
 import EndGameModal from "@/components/end-game-modal";
 import { GameState, createInitialGameState } from "@/lib/game-logic";
 
-export type GameScreenType = "welcome" | "story" | "education" | "game" | "end";
+export type GameScreenType = "story" | "education" | "game" | "end";
 
 export default function GamePage() {
-  const [currentScreen, setCurrentScreen] = useState<GameScreenType>("welcome");
+  const [currentScreen, setCurrentScreen] = useState<GameScreenType>("story"); // Changed from "welcome" to "story"
   const [gameState, setGameState] = useState<GameState>(createInitialGameState());
   const [showEndModal, setShowEndModal] = useState(false);
 
-  const handleScreenChange = (screen: GameScreenType) => {
-    setCurrentScreen(screen);
-  };
-
+  // Remove handleScreenChange
+  
   const handleStoryComplete = () => {
     setCurrentScreen("education");
   };
@@ -37,14 +34,12 @@ export default function GamePage() {
   const handleResetGame = () => {
     setGameState(createInitialGameState());
     setShowEndModal(false);
-    setCurrentScreen("welcome");
+    setCurrentScreen("story"); // Changed from "welcome" to "story"
   };
 
   return (
     <div className="min-h-screen">
-      {currentScreen === "welcome" && (
-        <WelcomeScreen onStart={() => handleScreenChange("story")} />
-      )}
+      {/* Remove WelcomeScreen section */}
       
       {currentScreen === "story" && (
         <StoryScreen onContinue={handleStoryComplete} />
