@@ -4,6 +4,12 @@
 
 InvestaMania is an interactive investment simulation game where players must grow their portfolio from $100M to $200M across 10 challenging rounds to save their failing tech empire from bankruptcy.
 
+## 🎯 Play Now!
+
+**🌐 Live Game: [https://investamania-game.onrender.com](https://investamania-game.onrender.com)**
+
+*Start playing immediately - no installation required!*
+
 ![Game Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
@@ -127,6 +133,14 @@ investamania/
 ├── migrations/              # Database migrations
 └── ... (config files)
 ```
+
+---
+
+## 🌐 Live Demo
+
+**Play the game now:** [https://investamania-game.onrender.com](https://investamania-game.onrender.com)
+
+No installation needed - just click and start playing!
 
 ---
 
@@ -327,4 +341,3 @@ InvestaMania is designed to teach:
 ---
 
 **🎮 Ready to save your business empire? Start playing InvestaMania!**
-# investamania-game
